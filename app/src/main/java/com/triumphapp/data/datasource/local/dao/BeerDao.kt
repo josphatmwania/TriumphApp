@@ -34,6 +34,31 @@ interface BeerDao {
     @Insert(onConflict = OnConflictStrategy.Replace)
     suspend fun addBeers(beer: List<BeerEntity>)
 
+    /**
+     * Getting beer by its id  and @return the beer from the DB
+     * @param id the id of the beer
+     */
+
+    @Query("SELECT * FROM beers WHERE id = :id")
+    suspend fun getBeerById(id: String) : BeerEntity
+
+
+    /**
+     *
+     * Deleting everything from the table
+     *
+     */
+
+    @Query("DELETE FROM beers")
+    suspend fun deleteAll()
+
+
+
+
+
+
+
+
 
 
 
