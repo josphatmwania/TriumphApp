@@ -56,6 +56,47 @@ data class BeerEntity {
      *
      */
 
+    fun BeerEntity.mapToDomain(): Beer =
+        Beer(
+            id = id.toString(),
+            name = name,
+            imageUrl = imageUrl,
+            brewersTips = brewersTips,
+            foodParing = foodPairing
+            abv = BigDecimal(abv),
+            tagline = tagline,
+            description = description,
+
+
+        )
+
+    /**
+     * Mapping the beer domain into a DB model
+     *
+     *
+     */
+
+
+
+    fun Beer.mapToEntity() : BeerEntity =
+        BeerEntity(
+            name = name,
+            id = id,
+            abv = abv.toString(),
+            imageUrl = imageUrl,
+            description = description,
+            taglline = tagline,
+            foodParing = foodPairing,
+            brewersTips = brewersTips
+
+
+        )
+
+
+
+
+
+
 
 
 
