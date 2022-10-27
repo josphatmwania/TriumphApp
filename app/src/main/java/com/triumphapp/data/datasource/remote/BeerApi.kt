@@ -36,7 +36,7 @@ interface BeerApi {
      *
      * @param id the id of the beer
      *
-     * @return a list of beers from Punk API
+     * @return a list of beers ~ from Punk API
      *
      *
      */
