@@ -24,4 +24,23 @@ interface BeerDao {
     suspend fun  getAllBeers(filterByName: String = ""): List<BeerEntity>
 
 
+    /**
+     * This function adds a list of beers to the DB. If a beer exits, it
+     * replaces it
+     *
+     * @param beer is the beer to be added
+     */
+
+    @Insert(onConflict = OnConflictStrategy.Replace)
+    suspend fun addBeers(beer: List<BeerEntity>)
+
+
+
+
+
+
+
+
+
+
 }
