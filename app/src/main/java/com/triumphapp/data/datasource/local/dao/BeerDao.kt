@@ -52,6 +52,24 @@ interface BeerDao {
     @Query("DELETE FROM beers")
     suspend fun deleteAll()
 
+    /**
+     * This function replaces all the beers in the DB
+     * @param beers is the beers to be added
+     *
+     *
+     */
+
+    @Transaction
+    suspend fun addAllBeers(beers: List<BeerEntity>) {
+        deleteAll()
+        addBeers(beers)
+    }
+
+
+
+
+
+
 
 
 
