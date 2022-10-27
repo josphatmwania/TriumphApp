@@ -85,7 +85,7 @@ data class BeerEntity {
             abv = abv.toString(),
             imageUrl = imageUrl,
             description = description,
-            taglline = tagline,
+            tagline = tagline,
             foodParing = foodPairing,
             brewersTips = brewersTips
 

@@ -33,3 +33,21 @@ data class BeerDto {
     @SerializedName("abv") val abv: String
 
 }
+
+    /**
+     * This function maps the Beer DTO into a domain model
+     *
+     */
+fun BeerDto.mapToDomain() : Beer =
+    Beer(
+        id = id.toString(),
+        name = name,
+        abv = BigDecimal(abv),
+        imageUrl = imageUrl,
+        tagline = tagline,
+        description = description,
+        brewersTips = brewersTips,
+        foodPairing = foodPairing
+
+    )
+
