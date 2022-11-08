@@ -4,7 +4,7 @@ import androidx.room.Database
 
 import com.triumphapp.data.datasource.local.models.BeerEntity
 import com.triumphapp.data.datasource.local.dao.BeerDao
-import com.triumphapp.data.datasource.local.converters.StringListConverters
+import com.triumphapp.data.datasource.local.converters.ListStringConverter
 import androidx.room.RoomDatabase
 
 
@@ -22,7 +22,7 @@ import androidx.room.RoomDatabase
 
 )
 
-@TypeConverters(StringListConverters::class)
+@TypeConverters(ListStringConverter::class)
 abstract class BeerDatabase : RoomDatabase(){
 
     abstract fun getBeerDao() : BeerDao

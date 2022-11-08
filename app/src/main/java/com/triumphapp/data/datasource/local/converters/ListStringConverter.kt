@@ -12,7 +12,7 @@ import com.google.gson.Gson
 
 
 
-class StringListConverters {
+class ListStringConverter {
 
     private val gson = Gson()
 
